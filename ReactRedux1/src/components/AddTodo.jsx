@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {useDispatch} from 'react-redux'
 import { addTodo } from '../features/todo/todoSlice'
 
-const SimpleTodo = () => {
+const AddTodo = () => {
     const [input, setInput] = useState('')
     const dispatch = useDispatch() // dispatch use reducer to add value in store (addtodo(),removetodo(),updatetodo())
 
@@ -31,4 +31,4 @@ const SimpleTodo = () => {
   )
 }
 
-export default SimpleTodo
+export default AddTodo
