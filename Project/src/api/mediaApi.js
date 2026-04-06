@@ -12,12 +12,11 @@ export default async function fetchPhotos(query,page=1,perPage=20){
     return response.data 
 }
 
-export default async function fetchVideos(query,page=1,perPage=15){
+export  async function fetchVideos(query,perPage=15){
         const response = await axios.get('https://api.pexels.com/v1/videos/search',{
-        params:{query,page,perPage},
+        params:{query,perPage},
         headers:{Authorization:PEXELS_KEY}
     })
 
-    console.log(response);
-    
+    return response.data
 }
