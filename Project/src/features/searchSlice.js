@@ -22,7 +22,7 @@ export const serachSlice = createSlice({
             state.loading = false
             state.results = action.payload
         },
-        setLoading(state,action){
+        setLoading(state){
             state.loading = true
             state.error = null
         },

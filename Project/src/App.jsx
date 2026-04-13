@@ -8,7 +8,7 @@ const App = () => {
   
 
   return (
-    <div className='h-screen w-full bg-gray-800 text-white'>
+    <div className='min-h-screen bg-gray-800 text-white'>
       <SearchBar/>
       <Tabs/>
       <ResultGrid/>
