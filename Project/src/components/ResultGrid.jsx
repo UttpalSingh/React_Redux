@@ -31,6 +31,7 @@ const ResultGrid = () => {
             title: item.alt_description,
             thumbnail: item.urls.small,
             src: item.urls.full,
+            url:item.links.html,
           }));
         }
         if (activeTab == "videos") {
@@ -41,6 +42,7 @@ const ResultGrid = () => {
             title: item.user.name || "video",
             thumbnail: item.image,
             src: item.video_files[0].link,
+            url:item.url
           }));
         }
 
@@ -60,7 +62,7 @@ const ResultGrid = () => {
   <div className="w-full flex justify-center flex-wrap gap-5 overflow-auto px-10">
     {results.map((item,index)=>{
         return <div key={index}>
-            <ResultCard item = {item}/>
+            <a target="_blank" href={item.url}><ResultCard item = {item}/></a>
         </div>
     })}
   </div>
@@ -68,3 +70,5 @@ const ResultGrid = () => {
 };
 
 export default ResultGrid;
+
+// Destructuring in JavaScript is a convenient way to extract values from arrays or objects and assign them to variables in a cleaner, shorter syntax.
